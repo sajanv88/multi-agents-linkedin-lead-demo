@@ -4,7 +4,13 @@
   "description": "",
   "main": "./src/main.mjs",
   "scripts": {
-    "start": "node ./src/main.mts"
+    "start": "node ./src/main.mts",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "check:ci": "biome ci .",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +31,9 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.5.14",
     "@google/adk-devtools": "^2.1.0",
-    "@types/node": "^26.6.2"
+    "@types/node": "^26.6.2",
+    "typescript": "^7.0.2"
   }
 }

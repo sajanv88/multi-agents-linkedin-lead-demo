@@ -1,0 +1,5 @@
+# Keep LF in the working tree on every platform so Biome's formatter
+# (lineEnding: "lf") stays stable regardless of core.autocrlf.
+* text=auto eol=lf
+
+pnpm-lock.yaml linguist-generated=true -diff

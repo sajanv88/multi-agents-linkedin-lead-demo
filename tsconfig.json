@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     // strict is already on by default
+    // Several dependencies ship .d.ts files that do not type-check on their own
+    // (e.g. @anthropic-ai/foundry-sdk narrows `models` to `undefined`).
+    "skipLibCheck": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
