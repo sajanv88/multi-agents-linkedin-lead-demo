@@ -1,0 +1,31 @@
+{
+  "name": "linkedin-lead-ai-agents",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.mjs",
+  "scripts": {
+    "start": "node ./src/main.mts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.5.1",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.5.1",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/foundry-sdk": "^0.4.8",
+    "@google/adk": "^2.1.0",
+    "@google/genai": "^2.23.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@google/adk-devtools": "^2.1.0",
+    "@types/node": "^26.6.2"
+  }
+}

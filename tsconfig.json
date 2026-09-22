@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    // strict is already on by default
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "erasableSyntaxOnly": true,
+    "rootDir": "./src",
+    "types": ["node"]
+  },
+  "include": ["./src"]
+}
