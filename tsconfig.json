@@ -1,5 +1,20 @@
 {
   "compilerOptions": {
+    // --- Emit target: Node 24, native ESM ---
+    "target": "es2024",
+    "lib": ["es2024"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    // Source imports `./x.mts` so Node can run it directly; tsc rewrites those
+    // specifiers to `./x.mjs` on emit.
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+
     // strict is already on by default
     // Several dependencies ship .d.ts files that do not type-check on their own
     // (e.g. @anthropic-ai/foundry-sdk narrows `models` to `undefined`).
@@ -7,8 +22,8 @@
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitOverride": true,
+    // Keeps the source runnable directly via Node's type stripping (`pnpm dev`).
     "erasableSyntaxOnly": true,
-    "rootDir": "./src",
     "types": ["node"]
   },
   "include": ["./src"]

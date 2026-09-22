@@ -166,9 +166,9 @@ importers:
 
   .:
     dependencies:
-      '@anthropic-ai/foundry-sdk':
-        specifier: ^0.4.8
-        version: 0.4.8(zod@4.6.5)
+      '@anthropic-ai/sdk':
+        specifier: ^0.127.0
+        version: 0.127.0(zod@4.6.5)
       '@google/adk':
         specifier: ^2.1.0
         version: 2.1.0(@grpc/grpc-js@1.14.5)(@mikro-orm/mariadb@7.2.1(@mikro-orm/core@7.2.1)(@types/node@26.6.2))(@mikro-orm/mssql@7.2.1(@mikro-orm/core@7.2.1))(@mikro-orm/mysql@7.2.1(@mikro-orm/core@7.2.1)(@types/node@26.6.2))(@mikro-orm/postgresql@7.2.1(@mikro-orm/core@7.2.1))(@mikro-orm/sqlite@7.2.1(@mikro-orm/core@7.2.1))(express@4.22.3)
@@ -208,9 +208,6 @@ packages:
         optional: true
       express:
         optional: true
-
-  '@anthropic-ai/foundry-sdk@0.4.8':
-    resolution: {integrity: sha512-TAR+r2hR9GlZLxXoSC6kWy1lrG0DP/mRwXHRR8m6LfOlO2jlhzb51JDmRfKJIRwO5BavncfsW8A+c5burd+3Uw==}
 
   '@anthropic-ai/sdk@0.127.0':
     resolution: {integrity: sha512-OKiVbG9LHCxjn4fBJZJFy/Bz3hqE1RYpwaeSEDNheQnvz0XNKmGT/Lhkz2Sf1a27Ldt3vVv+BkU81I0U/8EpoQ==}
@@ -2005,12 +2002,6 @@ snapshots:
     optionalDependencies:
       '@grpc/grpc-js': 1.14.5
       express: 4.22.3
-
-  '@anthropic-ai/foundry-sdk@0.4.8(zod@4.6.5)':
-    dependencies:
-      '@anthropic-ai/sdk': 0.127.0(zod@4.6.5)
-    transitivePeerDependencies:
-      - zod
 
   '@anthropic-ai/sdk@0.127.0(zod@4.6.5)':
     dependencies:

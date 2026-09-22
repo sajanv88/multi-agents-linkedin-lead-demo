@@ -2,15 +2,18 @@
   "name": "linkedin-lead-ai-agents",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/main.mjs",
+  "main": "./dist/main.mjs",
   "scripts": {
-    "start": "node ./src/main.mts",
+    "dev": "node ./src/main.mts",
+    "start": "node --env-file=.env ./dist/main.mjs",
+    "build": "pnpm run clean && tsc",
+    "clean": "node --eval \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "typecheck": "tsc --noEmit",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "format": "biome format --write .",
     "check": "biome check --write .",
-    "check:ci": "biome ci .",
-    "typecheck": "tsc --noEmit"
+    "check:ci": "biome ci ."
   },
   "keywords": [],
   "author": "",
@@ -25,7 +28,7 @@
   "packageManager": "pnpm@12.5.1",
   "type": "module",
   "dependencies": {
-    "@anthropic-ai/foundry-sdk": "^0.4.8",
+    "@anthropic-ai/sdk": "^0.127.0",
     "@google/adk": "^2.1.0",
     "@google/genai": "^2.23.0",
     "zod": "^4.6.5"

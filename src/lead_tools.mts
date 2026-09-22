@@ -1,12 +1,23 @@
 import { FunctionTool } from '@google/adk';
 import { z } from 'zod';
 
-export interface LeadQuery { industry: string; country?: string; keywords: string[]; limit: number }
-export interface Lead {
-  company: string; website?: string; industry: string;
-  country?: string; headcount?: string; whyRelevant: string;
+export interface LeadQuery {
+  industry: string;
+  country?: string | undefined;
+  keywords: string[];
+  limit: number;
 }
-export interface LeadSource { search(q: LeadQuery): Promise<Lead[]> }
+export interface Lead {
+  company: string;
+  website?: string;
+  industry: string;
+  country?: string;
+  headcount?: string;
+  whyRelevant: string;
+}
+export interface LeadSource {
+  search(q: LeadQuery): Promise<Lead[]>;
+}
 
 export const searchCompaniesTool = (source: LeadSource) =>
   new FunctionTool({
